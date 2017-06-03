@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}PressDictionary!{% endblock %}</title>
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/app.css') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <script src="{{ asset('js/modernizr.js') }}"></script>
+</head>
+<body>
+<div class="top-bar">
+    <div class="top-bar-right">
+        <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">PressDictionary</li>
+        </ul>
+    </div>
+</div>
+{% block body %}{% endblock %}
+<script src="{{ asset('js/build.js') }}"></script>
+<script src="{{ asset('js/app.js') }}"></script>
+</body>
 </html>

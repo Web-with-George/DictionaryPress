@@ -17,3 +17,11 @@
 /web/bundles/
 
 /.idea
+/.sass-cache
+
+#JS Dependencies with Yarn
+/node_modules
+
+#Assets will be generated with Grunt
+/web/css
+/web/js

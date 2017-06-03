@@ -1,0 +1,34 @@
+{
+  "name": "press_dictionary",
+  "version": "1.0.0",
+  "description": "WordPress websites management system",
+  "main": "web/index.php",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/Web-with-george/DictionaryPress.git",
+  "keywords": [
+    "WordPress",
+    "Symfony",
+    "Management",
+    "System"
+  ],
+  "author": "Jorge Guerra <jorguerra@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Web-with-george/DictionaryPress/issues"
+  },
+  "homepage": "https://github.com/Web-with-george/DictionaryPress#readme",
+  "dependencies": {
+    "bower": "^1.8.0",
+    "foundation-sites": "^6.3.1",
+    "grunt": "^1.0.1",
+    "grunt-contrib-coffee": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
