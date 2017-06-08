@@ -9,6 +9,15 @@ module.exports = (grunt) ->
           sourcemap: 'none'
         files:
           'web/css/app.css': 'app/sass/app.scss'
+    #Copy images, fonts, or any other asset excluding sass files
+    copy:
+      style_files:
+        files: [
+          expand: true
+          cwd: 'app/sass'
+          src: ['**','!*.scss']
+          dest: 'web/css/'
+          ]
     #Build js file with required libraries
     uglify:
       options:
@@ -31,7 +40,10 @@ module.exports = (grunt) ->
       #Update styles when yarn is updated or
       foundation:
         files: ['node_modules/foundation-sites/scss/**', 'app/sass/*']
-        tasks: ['sass']
+        tasks: ['sass','copy:style_files']
+      style_assets:
+        files: ['app/sass/*', '!*.scss']
+        tasks: []
       appjs:
         files: ['app/coffee/app.coffee']
         tasks: ['coffee']
@@ -48,4 +60,5 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-sass'
+  grunt.loadNpmTasks 'grunt-contrib-copy'
   return

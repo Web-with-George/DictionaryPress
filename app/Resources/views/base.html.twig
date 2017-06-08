@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
     <meta charset="UTF-8" />
     <title>{% block title %}PressDictionary!{% endblock %}</title>
@@ -8,15 +8,23 @@
     <script src="{{ asset('js/modernizr.js') }}"></script>
 </head>
 <body>
-<div class="top-bar">
-    <div class="top-bar-right">
-        <ul class="dropdown menu" data-dropdown-menu>
-            <li class="menu-text">PressDictionary</li>
-        </ul>
+
+    <div class="top-bar" id="header">
+        <div class="top-bar-right">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text">PressDictionary</li>
+            </ul>
+        </div>
     </div>
-</div>
-{% block body %}{% endblock %}
-<script src="{{ asset('js/build.js') }}"></script>
-<script src="{{ asset('js/app.js') }}"></script>
+    <div id="content">
+    {% block body %}
+
+    {% endblock %}
+    </div>
+    <div class="row column expanded" id="footer">2017 - Developed by Web with George</div>
+
+    <script src="{{ asset('js/build.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+
 </body>
 </html>

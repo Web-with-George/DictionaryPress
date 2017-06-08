@@ -1,11 +1,66 @@
 @import 'settings';
 @import 'foundation';
-@include foundation-everything;
+@include foundation-everything(true);
+
+@import url('https://fonts.googleapis.com/css?family=Philosopher|Lato');;
+
+body{
+  background: url(black_40.png), url(laptop.jpg)  top right 100%;
+  /*-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+  position: static;
+}
 
 .top-bar, .top-bar ul{
-  color: antiquewhite;
-  font-family: "Apple Chancery";
+  background: transparent;
+  color: $white;
 }
-.top-bar{
+
+.top-bar li.menu-text{
+  font-family: 'Philosopher';
   font-size: 22px;
+  font-shadow: 1px 1px $light-gray
+}
+
+.top-bar{
+  border-bottom:4px solid $dark-gray  ;
+  background: url(laptop.jpg)  top right 100%;
+  /*-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+}
+
+$footer-height:30px;
+#footer, #content{
+  font-family:'Lato', sans-serif;
+  color: $white;
+  width:100%;
+}
+
+#content{
+  position: static;
+}
+
+#footer{
+  height: $footer-height;
+  line-height: $footer-height;
+  vertical-align: middle;
+  bottom:0;
+  background: black;
+  border-top: 1px solid whitesmoke;
+  text-align: left;
+  font-size: 12px;
+  position: fixed;
+}
+@media print, screen and (min-width: 75em) {
+  #footer{
+    padding-left: 22px;
+  }
+}
+
+#content > div.row{
+  padding-bottom: 20px;
 }
