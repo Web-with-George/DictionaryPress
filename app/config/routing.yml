@@ -1,3 +1,8 @@
+setup:
+    resource: "@SetupBundle/Controller/"
+    type:     annotation
+    prefix:   /install
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
