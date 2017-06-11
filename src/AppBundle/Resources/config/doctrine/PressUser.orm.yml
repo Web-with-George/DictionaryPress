@@ -1,0 +1,21 @@
+AppBundle\Entity\PressUser:
+    type: entity
+    table: press_user
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        firstName:
+            type: string
+            length: 50
+            column: first_name
+            nullable: true
+        lastName:
+            type: string
+            length: 50
+            column: last_name
+            nullable: true
+    lifecycleCallbacks: {  }

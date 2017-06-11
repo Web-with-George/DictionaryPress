@@ -6,3 +6,7 @@ setup:
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+app_extra:
+    resource: '@AppBundle/Resources/config/routing/routing.yml'
+
