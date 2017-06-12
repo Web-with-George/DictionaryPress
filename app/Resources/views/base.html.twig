@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <title>{% block title %}PressDictionary!{% endblock %}</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css" />
     <link type="text/css" rel="stylesheet" href="{{ asset('css/app.css') }}" />
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     <script src="{{ asset('js/modernizr.js') }}"></script>
 </head>
 <body>
-
     <div class="top-bar" id="header">
         <div class="top-bar-right">
             <ul class="dropdown menu" data-dropdown-menu>
@@ -19,8 +19,7 @@
     <div id="content">
     {% block body %}
 
-    {% endblock %}
-    </div>
+    {% endblock %}</div>
     <div class="row column expanded" id="footer">2017 - Developed by Web with George</div>
 
     <script src="{{ asset('js/build.js') }}"></script>

@@ -1,0 +1,9 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+<div class="row align-center" style="margin-top: 5em">
+    <div class="columns large-8" id="fos" style="background:rgba(255,255,255,.5); border-radius: 10px; padding: 1em">
+        {% block fos_user_content %}{% endblock %}
+    </div>
+</div>
+{% endblock %}

@@ -18,6 +18,8 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new SetupBundle\SetupBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new Flob\Bundle\FoundationBundle\FlobFoundationBundle(),
+            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
